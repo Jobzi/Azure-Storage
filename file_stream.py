@@ -16,14 +16,17 @@ class FileStream:
 
     def get_file_stream(self, filename:str):
         import tempfile 
+        try:
+            local_file = tempfile.NamedTemporaryFile()
+            self.blob_service.get_blob_to_stream(self.container_name, filename, stream=local_file)
 
-        local_file = tempfile.NamedTemporaryFile()
-        self.blob_service.get_blob_to_stream(self.container_name, filename, stream=local_file)
+            local_file.seek(0)
+            return local_file
+        except Exception as e:
+            print(e)
+            return None     
 
-        local_file.seek(0)
-        return local_file
-
-fs = FileStream()
-
-result = fs.get_file_stream("activity.json")
-print(json.load(result))
+# fs = FileStream()
+# result = fs.get_file_stream("activitys.json")
+# print(result)
+# #print(json.load(result))

@@ -6,7 +6,7 @@ In this quickstart, you learn to manage blobs by using Python. Blobs are objects
 - Python.
 - Azure Storage SDK for Python.
   
-````python
+````bash
 pip install azure-storage-blob==2.1.0
 ````
 
