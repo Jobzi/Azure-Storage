@@ -1,4 +1,3 @@
-import json
 import os
 
 from azure.storage.blob.blockblobservice import BlockBlobService
@@ -25,8 +24,3 @@ class FileStream:
         except Exception as e:
             print(e)
             return None     
-
-# fs = FileStream()
-# result = fs.get_file_stream("activitys.json")
-# print(result)
-# #print(json.load(result))

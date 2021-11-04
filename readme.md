@@ -1,5 +1,5 @@
 # Stream files from Azure Storage
-In this quickstart, you learn to manage blobs by using Python. Blobs are objects that can hold large amounts of text or binary data, including images, documents, streaming media, and archive data. You'll upload, download, and list blobs, and you'll create and delete containers.
+In this quickstart, you learn to manage blobs by using Python. Blobs are objects that can hold large amounts of text or binary data, including images, documents, streaming media, and archive data.
 ## Prerequisites
 - An Azure account with an active subscription. Create an account for free.
 - An Azure Storage account. Create a storage account.
