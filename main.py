@@ -4,12 +4,14 @@ from file_stream import FileStream
 import json
 app = FastAPI()
 
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
+#origins = ["*"]
+#app.add_middleware(
+#    CORSMiddleware,
+#    allow_origins=origins,
+#    allow_credentials=True,
+#    allow_methods=["*"],
+#    allow_headers=["*"],
+#)
 
 @app.get("/")
 def read_root():

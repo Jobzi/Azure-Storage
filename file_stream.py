@@ -2,7 +2,7 @@ import os
 import json
 from azure.storage.blob.blockblobservice import BlockBlobService
 
-ACCOUNT_KEY ="rAxaHDPa2yj06KShV7f+Pe6esNX/Bub6t+9LXtyksBAF6OxQGcJVDGbIudfjOxtcCe83wEbm2v+9t3ApJNUwUg=="
+ACCOUNT_KEY = os.environ.get('AZURE_STORAGE_ACCOUNT_KEY')
 
 class FileStream:
     account_name = "storagefiles2"
