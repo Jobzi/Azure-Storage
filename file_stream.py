@@ -1,8 +1,8 @@
 import os
-
+import json
 from azure.storage.blob.blockblobservice import BlockBlobService
 
-ACCOUNT_KEY = os.getenv('AZURE_STORAGE_ACCOUNT_KEY')
+ACCOUNT_KEY ="rAxaHDPa2yj06KShV7f+Pe6esNX/Bub6t+9LXtyksBAF6OxQGcJVDGbIudfjOxtcCe83wEbm2v+9t3ApJNUwUg=="
 
 class FileStream:
     account_name = "storagefiles2"
@@ -23,4 +23,9 @@ class FileStream:
             return local_file
         except Exception as e:
             print(e)
-            return None     
+            return None 
+                
+#fs = FileStream()
+#result = fs.get_file_stream("activity.json")
+#
+#print(json.load(result))
